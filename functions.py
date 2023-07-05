@@ -1,8 +1,6 @@
 # 모듈 호출
 import re
 import math
-import numpy as np
-import matplotlib as plt
 
 # 약수 함수
 def divisor(num):
@@ -64,3 +62,6 @@ def d(a,b,c):
     elif ((b**2)-4*a*c)<0:
         print("이 방정식은 두 허근을 갖습니다.")
     return flag  
+
+def quadratic_functio(x,a,b,c):
+    return (a*(x**2))+(b*x)+c

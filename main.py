@@ -1,6 +1,8 @@
 # 모듈 호출
 import sys
 import functions 
+import numpy as np
+import matplotlib as plt
 
 # 파이썬을 이용한 방정식의 해결
 print("SFR: Subject-Fusion Research for School")
@@ -42,4 +44,12 @@ if check==2:
       print("이차함수 식을 입력해 주세요. (승수 입력: x^n, 계수와 미지수를 띄우지 마십시오.)")
       function = input("이차함수 식을 입력하세요 :")
       a,b,c = functions.extract_coefficients(function)
-      functions.quadratic_function(a,b,c)
+      x=np.linespace(-10,10,100)
+      y=functions.quadratic_function(x,a,b,c)
+      plt.plot(x,y)
+      plt.xlabel('x')
+      plt.ylabel('y')
+      plt.title('Quadratic Function')
+      plt.grid(True)
+      plt.Color(255,255,240)
+      plt.show()
