@@ -2,7 +2,7 @@
 import sys
 import functions 
 import numpy as np
-import matplotlib as plt
+import matplotlib.pyplot as plt
 
 # 파이썬을 이용한 방정식의 해결
 print("SFR: Subject-Fusion Research for School")
@@ -18,7 +18,7 @@ print(
 while True: 
       try:
             check=int(input("원하는 항목을 입력하세요. : "))
-            if check==1:
+            if check==1 or check==2:
                   break
             elif check==3:
                   print("프로그램을 종료합니다.")
@@ -44,12 +44,11 @@ if check==2:
       print("이차함수 식을 입력해 주세요. (승수 입력: x^n, 계수와 미지수를 띄우지 마십시오.)")
       function = input("이차함수 식을 입력하세요 :")
       a,b,c = functions.extract_coefficients(function)
-      x=np.linespace(-10,10,100)
-      y=functions.quadratic_function(x,a,b,c)
-      plt.plot(x,y)
+      x=np.linspace(-10,10,100)
+      y=(a*(x**2))+(b*x)+c
+      plt.plot(x,y,color='darkviolet',)
       plt.xlabel('x')
       plt.ylabel('y')
       plt.title('Quadratic Function')
       plt.grid(True)
-      plt.Color(255,255,240)
       plt.show()

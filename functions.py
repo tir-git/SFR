@@ -37,7 +37,7 @@ def root1(a,b,c,d,e):
 # (이차방정식) 계수 함수
 def extract_coefficients(equation):
     quadratic_regex = r"([+-]?\d*)x\^2"
-    linear_regex = r"([+-]?\d*)x(?![\^])"
+    linear_regex = r"([+-]?\d+)x(?![\^])"
     constant_regex = r"([+-]?\d+)=0$"
     
     quadratic_coefficient = re.search(quadratic_regex, equation)
@@ -62,6 +62,3 @@ def d(a,b,c):
     elif ((b**2)-4*a*c)<0:
         print("이 방정식은 두 허근을 갖습니다.")
     return flag  
-
-def quadratic_functio(x,a,b,c):
-    return (a*(x**2))+(b*x)+c
