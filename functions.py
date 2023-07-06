@@ -45,7 +45,7 @@ def extract_coefficients(equation):
     constant_term = re.search(constant_regex, equation)
     
     a = int(quadratic_coefficient.group(1).replace('-', '') or '1') if quadratic_coefficient and quadratic_coefficient.group(1) else 1
-    b = int(linear_coefficient.group(1).replace('-', '') or '1') if linear_coefficient and linear_coefficient.group(1) else 1
+    b = int(linear_coefficient.group(1) or '1') if linear_coefficient and linear_coefficient.group(1) else 1
     c = int(constant_term.group(1)) if constant_term and constant_term.group(1) else 0
     
     return (a, b, c)

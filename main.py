@@ -33,6 +33,7 @@ if check==1:
       print("이차방정식을 입력해 주세요. (승수 입력: x^n, 계수와 미지수를 띄우지 마십시오)")
       equation = input("이차방정식을 입력하세요 : ")
       a,b,c = functions.extract_coefficients(equation)
+      print(a,b,c)
       if functions.d(a,b,c)==0:
             print("조립제법이 불가합니다.")
             sys.exit()
@@ -50,5 +51,5 @@ if check==2:
       plt.xlabel('x')
       plt.ylabel('y')
       plt.title('Quadratic Function')
-      plt.grid(True)
+      plt.grid(True, which='both')
       plt.show()
