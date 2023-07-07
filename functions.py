@@ -16,8 +16,8 @@ def divisor(num):
 # 근 구하기(근의 공식)
 def root2(a,b,c):
     roots=[]
-    roots.append(-b+(math.sqrt((b**2)-4*a*c)))
-    roots.append(-b-(math.sqrt((b**2)-4*a*c)))
+    roots.append((-b+(math.sqrt((b**2)-4*a*c)))/2*a)
+    roots.append((-b-(math.sqrt((b**2)-4*a*c)))/2*a)
     return roots
 
 # 근 구하기 (조립제법)
