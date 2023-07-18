@@ -41,6 +41,7 @@ if check==1:
       cd = functions.divisor(c)
       print(functions.root1(a,b,c,ad,cd))
 
+# 그래프 그리기
 if check==2:
       print("이차함수 식을 입력해 주세요. (승수 입력: x^n, 계수와 미지수를 띄우지 마십시오.)")
       function = input("이차함수 식을 입력하세요 :")
